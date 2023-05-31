@@ -42,8 +42,9 @@ dotnet ef database update --project SchoolRegister.DAL --startup-project SchoolR
 dotnet ef database drop --project SchoolRegister.DAL --startup-project SchoolRegister.Web
 ```
 
-dotnet aspnet-codegenerator view -p Kolokwium.Web Index List -m SubjectVm -outDir Views/Subject -
-scripts -udl
+dotnet aspnet-codegenerator view -p Kolokwium.Web Index List -m SubjectVm -outDir Views/Subject -scripts -udl
+
+dotnet aspnet-codegenerator identity --project Kolokwium.Web -dc Kolokwium.DAL.ApplicationDbContext -u Kolokwium.Model.DataModels.User
 
 ### Database Data SQL Script
 ```sql

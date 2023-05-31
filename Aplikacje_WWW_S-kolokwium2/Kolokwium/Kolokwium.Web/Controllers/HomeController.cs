@@ -60,6 +60,9 @@ return RedirectToAction ("Index");
 return View ();
 }
 
+<select asp-for="TeacherId" class="form-control"
+asp-items="@ViewBag.TeachersSelectList"></select>
+
         
     }
 }
